@@ -13,7 +13,7 @@ app.use(express.json());
 app.get("/api/notes", (err, res) => {
     try {
       createNoteData = fs.readFileSync("db/db.json", "utf8");
-      console.log("Hello from the SERVER!");
+      console.log(`Hello from Port ${PORT}!`);
       createNoteData = JSON.parse(createNoteData);
     } catch (err) {
       console.log("\n error (catch err app.get):");
